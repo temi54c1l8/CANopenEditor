@@ -426,6 +426,7 @@ namespace libEDSsharp
                 }
 
                 writer.WriteLine(string.Format("PDOMapping={0}", PDOMapping == true ? 1 : 0));
+                writer.WriteLine(string.Format("SRDOMapping={0}", prop.CO_accessSRDO == AccessSRDO.no ? 0 : 1));
 
                 if (prop.CO_flagsPDO == true)
                 {
