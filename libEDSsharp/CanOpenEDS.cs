@@ -66,6 +66,9 @@ namespace libEDSsharp
                 if (f.GetValue(this) == null)
                     continue;
 
+                if (String.Equals(f.GetValue(this),""))
+                    continue;
+
                 EdsExport ex = (EdsExport)f.GetCustomAttribute(typeof(EdsExport));
 
                 bool comment = ex.IsReadOnly();
