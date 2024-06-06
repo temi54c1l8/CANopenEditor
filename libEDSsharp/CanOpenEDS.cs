@@ -67,24 +67,36 @@ namespace libEDSsharp
                 if (f.GetValue(this) == null)
                     continue;
 
-                if (String.Equals(f.GetValue(this),""))
+                if (String.Equals(f.GetValue(this), ""))
                     continue;
 
                 EdsExport ex = (EdsExport)f.GetCustomAttribute(typeof(EdsExport));
 
                 bool comment = ex.IsReadOnly();
 
+                string CommentString = comment == true ? ";" : "";
+
+                string NameString = f.Name;
+                if (NameString == "CANopenSafetySupported")
+                {
+                    NameString = ";CANopenSafetySupported";
+                }
+                if (NameString == "NG_Slave")
+                {
+                    NameString = ";NG_Slave";
+                }
+
                 if (f.FieldType.Name == "Boolean")
                 {
-                    writer.WriteLine(string.Format("{2}{0}={1}", f.Name, ((bool)f.GetValue(this)) == true ? 1 : 0, comment == true ? ";" : ""));
+                    writer.WriteLine(string.Format("{2}{0}={1}", NameString, ((bool)f.GetValue(this)) == true ? 1 : 0, CommentString));
                 }
                 else  if (f.FieldType.Name == "UInt32")
                 {
-                    writer.WriteLine(string.Format("{2}{0}={1}", f.Name, string.Format("0x{0:x8}", f.GetValue(this)), comment == true ? ";" : ""));
+                    writer.WriteLine(string.Format("{2}{0}={1}", NameString, string.Format("0x{0:x8}", f.GetValue(this)), CommentString));
                 }
                 else
                 {
-                    writer.WriteLine(string.Format("{2}{0}={1}", f.Name, f.GetValue(this).ToString(), comment == true ? ";" : ""));
+                    writer.WriteLine(string.Format("{2}{0}={1}", NameString, f.GetValue(this).ToString(), CommentString));
                 }
             }
 
@@ -434,7 +446,12 @@ namespace libEDSsharp
                 }
 
                 writer.WriteLine(string.Format("PDOMapping={0}", PDOMapping == true ? 1 : 0));
-                writer.WriteLine(string.Format(";SRDOMapping={0}", prop.CO_accessSRDO == AccessSRDO.no ? 0 : 1));
+                Int32 SRmap = prop.CO_accessSRDO == AccessSRDO.no ? 0 : 1;
+                writer.WriteLine(string.Format(";SRDOMapping={0}", SRmap));
+                if (SRmap != 0)
+                {
+                    writer.WriteLine(string.Format(";InvertedSRAD=see documentation..."));
+                }
 
                 if (prop.CO_flagsPDO == true)
                 {
