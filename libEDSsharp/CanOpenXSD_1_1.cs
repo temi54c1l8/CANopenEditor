@@ -688,6 +688,8 @@ namespace CanOpenXSD_1_1 {
 
         private orderCode orderCodeField;
 
+        private safetySupported safetySupportedField;
+
         private deviceFamily deviceFamilyField;
 
         private productID productIDField;
@@ -696,7 +698,7 @@ namespace CanOpenXSD_1_1 {
 
         private System.DateTime buildDateField;
 
-        private bool buildDateFieldSpecified;
+        private bool buildDateFieldSpecified; 
 
         private specificationRevision specificationRevisionField;
 
@@ -739,6 +741,20 @@ namespace CanOpenXSD_1_1 {
             }
         }
 
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.canopen.org/xml/1.1")]
+        public safetySupported safetySupported
+        {
+            get
+            {
+                return this.safetySupportedField;
+            }
+            set
+            {
+                this.safetySupportedField = value;
+            }
+        }
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.canopen.org/xml/1.1")]
         public deviceFamily deviceFamily {
@@ -933,6 +949,55 @@ namespace CanOpenXSD_1_1 {
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public string Value
+        {
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.canopen.org/xml/1.1")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.canopen.org/xml/1.1", IsNullable = false)]
+    public partial class safetySupported
+    {
+
+        private bool readOnlyField;
+
+        private bool valueField;
+
+        public safetySupported()
+        {
+            this.readOnlyField = true;
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DefaultValueAttribute(true)]
+        public bool readOnly
+        {
+            get
+            {
+                return this.readOnlyField;
+            }
+            set
+            {
+                this.readOnlyField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public bool Value
         {
             get
             {
@@ -3441,6 +3506,8 @@ namespace CanOpenXSD_1_1 {
 
         private orderCode orderCodeField;
 
+        private safetySupported safetySupportedField;
+
         private vendorText vendorTextField;
 
         private deviceFamily deviceFamilyField;
@@ -3508,6 +3575,19 @@ namespace CanOpenXSD_1_1 {
             set
             {
                 this.orderCodeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public safetySupported safetySupported
+        {
+            get
+            {
+                return this.safetySupportedField;
+            }
+            set
+            {
+                this.safetySupportedField = value;
             }
         }
 

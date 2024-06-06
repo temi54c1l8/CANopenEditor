@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox_safetySupported = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_mdFileName = new System.Windows.Forms.TextBox();
@@ -60,6 +61,8 @@
             this.label32 = new System.Windows.Forms.Label();
             this.textBox_concretenodeid = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox_ordercode = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox_revisionnumber = new System.Windows.Forms.TextBox();
             this.textBox_productnumber = new System.Windows.Forms.TextBox();
@@ -106,8 +109,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox_ordercode = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -119,6 +120,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.checkBox_safetySupported);
             this.panel1.Controls.Add(this.groupBox5);
             this.panel1.Controls.Add(this.groupBox6);
             this.panel1.Controls.Add(this.groupBox4);
@@ -129,6 +131,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(773, 833);
             this.panel1.TabIndex = 60;
+            // 
+            // checkBox_safetySupported
+            // 
+            this.checkBox_safetySupported.AutoSize = true;
+            this.checkBox_safetySupported.Location = new System.Drawing.Point(531, 261);
+            this.checkBox_safetySupported.Name = "checkBox_safetySupported";
+            this.checkBox_safetySupported.Size = new System.Drawing.Size(151, 17);
+            this.checkBox_safetySupported.TabIndex = 64;
+            this.checkBox_safetySupported.Text = "CANopenSafetySupported";
+            this.checkBox_safetySupported.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -436,6 +448,22 @@
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Device Info";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(10, 153);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(58, 13);
+            this.label12.TabIndex = 41;
+            this.label12.Text = "OrderCode";
+            // 
+            // textBox_ordercode
+            // 
+            this.textBox_ordercode.Location = new System.Drawing.Point(139, 150);
+            this.textBox_ordercode.Name = "textBox_ordercode";
+            this.textBox_ordercode.Size = new System.Drawing.Size(226, 20);
+            this.textBox_ordercode.TabIndex = 40;
             // 
             // label11
             // 
@@ -871,22 +899,6 @@
             this.label18.TabIndex = 18;
             this.label18.Text = "File version";
             // 
-            // textBox_ordercode
-            // 
-            this.textBox_ordercode.Location = new System.Drawing.Point(139, 150);
-            this.textBox_ordercode.Name = "textBox_ordercode";
-            this.textBox_ordercode.Size = new System.Drawing.Size(226, 20);
-            this.textBox_ordercode.TabIndex = 40;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 153);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 13);
-            this.label12.TabIndex = 41;
-            this.label12.Text = "OrderCode";
-            // 
             // DeviceInfoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -895,6 +907,7 @@
             this.Name = "DeviceInfoView";
             this.Size = new System.Drawing.Size(773, 537);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -993,5 +1006,6 @@
         private System.Windows.Forms.TextBox textBox_revisionnumber;
         private System.Windows.Forms.TextBox textBox_ordercode;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox checkBox_safetySupported;
     }
 }

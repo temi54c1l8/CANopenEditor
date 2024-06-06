@@ -776,6 +776,12 @@ namespace libEDSsharp
 
         public bool LSS_Master;
 
+        /// <summary>
+        /// The value indicates, if the CANopen device processes CANopen Safety-related data
+        /// </summary>
+        [EdsExport]
+        public bool CANopenSafetySupported = false;
+
         [EdsExport]
         public bool NG_Slave;
 
