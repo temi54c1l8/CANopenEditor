@@ -272,7 +272,8 @@ namespace ODEditor
                     od.AccessSDO().ToString(),
                     od.AccessPDO().ToString(),
                     od.prop.CO_accessSRDO.ToString(),
-                    od.defaultvalue
+                    od.defaultvalue,
+                    od.InvertedSRAD
                 });
                 lvi.Tag = od;
                 listView_subObjects.Items.Add(lvi);
@@ -300,7 +301,8 @@ namespace ODEditor
                         subod.AccessSDO().ToString(),
                         subod.AccessPDO().ToString(),
                         subod.prop.CO_accessSRDO.ToString(),
-                        subod.defaultvalue
+                        subod.defaultvalue,
+                        subod.InvertedSRAD
                     });
                     lvi2.Tag = subod;
                     listView_subObjects.Items.Add(lvi2);
@@ -354,6 +356,8 @@ namespace ODEditor
                 textBox_highLimit.Enabled = true;
                 textBox_lowLimit.Enabled = true;
                 textBox_stringLengthMin.Enabled = true;
+                textBox_InvertedSRAD.Enabled = true;
+
 
                 string dataType = (od.datatype == DataType.UNKNOWN && od.parent != null)
                                 ? od.parent.datatype.ToString()
@@ -377,6 +381,7 @@ namespace ODEditor
                 textBox_highLimit.Text = od.HighLimit;
                 textBox_lowLimit.Text = od.LowLimit;
                 textBox_stringLengthMin.Text = od.prop.CO_stringLengthMin.ToString();
+                textBox_InvertedSRAD.Text = od.InvertedSRAD;
             }
             else
             {
@@ -390,6 +395,7 @@ namespace ODEditor
                 textBox_highLimit.Text = "";
                 textBox_lowLimit.Text = "";
                 textBox_stringLengthMin.Text = "";
+                textBox_InvertedSRAD.Text = "";
 
                 comboBox_dataType.Enabled = false;
                 comboBox_accessSDO.Enabled = false;
@@ -401,6 +407,7 @@ namespace ODEditor
                 textBox_highLimit.Enabled = false;
                 textBox_lowLimit.Enabled = false;
                 textBox_stringLengthMin.Enabled = false;
+                textBox_InvertedSRAD.Enabled = false;
             }
 
             ODentry odBase;
@@ -536,6 +543,7 @@ namespace ODEditor
                 od.actualvalue = textBox_actualValue.Text;
                 od.HighLimit = textBox_highLimit.Text;
                 od.LowLimit = textBox_lowLimit.Text;
+                od.InvertedSRAD = textBox_InvertedSRAD.Text;
 
                 // CO_stringLengthMin
                 if (od.datatype == DataType.VISIBLE_STRING || od.datatype == DataType.UNICODE_STRING || od.datatype == DataType.OCTET_STRING)

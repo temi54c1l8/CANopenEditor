@@ -61,6 +61,8 @@ namespace ODEditor
             this.label23 = new System.Windows.Forms.Label();
             this.textBox_index = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox_InvertedSRAD = new System.Windows.Forms.TextBox();
             this.checkBox_autosave = new System.Windows.Forms.CheckBox();
             this.textBox_stringLengthMin = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -107,6 +109,7 @@ namespace ODEditor
             this.contextMenu_subObject_addSubItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenu_subObject_removeSubItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenu_subObject_removeSubItemLeaveGapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -135,6 +138,7 @@ namespace ODEditor
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -144,8 +148,9 @@ namespace ODEditor
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer1.Size = new System.Drawing.Size(1138, 745);
-            this.splitContainer1.SplitterDistance = 280;
+            this.splitContainer1.Size = new System.Drawing.Size(1517, 917);
+            this.splitContainer1.SplitterDistance = 373;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 2;
             this.splitContainer1.TabStop = false;
             // 
@@ -154,6 +159,7 @@ namespace ODEditor
             this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -164,8 +170,9 @@ namespace ODEditor
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(280, 745);
-            this.splitContainer2.SplitterDistance = 245;
+            this.splitContainer2.Size = new System.Drawing.Size(373, 917);
+            this.splitContainer2.SplitterDistance = 301;
+            this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
             this.splitContainer2.TabStop = false;
             // 
@@ -177,11 +184,12 @@ namespace ODEditor
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(278, 243);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(371, 299);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // listView_communication_objects
@@ -192,9 +200,10 @@ namespace ODEditor
             this.listView_communication_objects.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView_communication_objects.FullRowSelect = true;
             this.listView_communication_objects.HideSelection = false;
-            this.listView_communication_objects.Location = new System.Drawing.Point(3, 23);
+            this.listView_communication_objects.Location = new System.Drawing.Point(4, 29);
+            this.listView_communication_objects.Margin = new System.Windows.Forms.Padding(4);
             this.listView_communication_objects.Name = "listView_communication_objects";
-            this.listView_communication_objects.Size = new System.Drawing.Size(272, 217);
+            this.listView_communication_objects.Size = new System.Drawing.Size(363, 266);
             this.listView_communication_objects.TabIndex = 0;
             this.listView_communication_objects.UseCompatibleStateImageBehavior = false;
             this.listView_communication_objects.View = System.Windows.Forms.View.Details;
@@ -214,9 +223,10 @@ namespace ODEditor
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(4, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 13);
+            this.label1.Size = new System.Drawing.Size(223, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Communication Specific Parameters";
             // 
@@ -225,6 +235,7 @@ namespace ODEditor
             this.splitContainer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer3.Name = "splitContainer3";
             this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -235,8 +246,9 @@ namespace ODEditor
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.tableLayoutPanel3);
-            this.splitContainer3.Size = new System.Drawing.Size(280, 496);
-            this.splitContainer3.SplitterDistance = 244;
+            this.splitContainer3.Size = new System.Drawing.Size(373, 611);
+            this.splitContainer3.SplitterDistance = 300;
+            this.splitContainer3.SplitterWidth = 5;
             this.splitContainer3.TabIndex = 0;
             this.splitContainer3.TabStop = false;
             // 
@@ -248,19 +260,21 @@ namespace ODEditor
             this.tableLayoutPanel2.Controls.Add(this.listView_manufacturer_objects, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(278, 242);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(371, 298);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Location = new System.Drawing.Point(4, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 13);
+            this.label2.Size = new System.Drawing.Size(208, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Manufacturer Specific Parameters";
             // 
@@ -272,9 +286,10 @@ namespace ODEditor
             this.listView_manufacturer_objects.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView_manufacturer_objects.FullRowSelect = true;
             this.listView_manufacturer_objects.HideSelection = false;
-            this.listView_manufacturer_objects.Location = new System.Drawing.Point(3, 23);
+            this.listView_manufacturer_objects.Location = new System.Drawing.Point(4, 29);
+            this.listView_manufacturer_objects.Margin = new System.Windows.Forms.Padding(4);
             this.listView_manufacturer_objects.Name = "listView_manufacturer_objects";
-            this.listView_manufacturer_objects.Size = new System.Drawing.Size(272, 216);
+            this.listView_manufacturer_objects.Size = new System.Drawing.Size(363, 265);
             this.listView_manufacturer_objects.TabIndex = 0;
             this.listView_manufacturer_objects.UseCompatibleStateImageBehavior = false;
             this.listView_manufacturer_objects.View = System.Windows.Forms.View.Details;
@@ -299,19 +314,21 @@ namespace ODEditor
             this.tableLayoutPanel3.Controls.Add(this.listView_deviceProfile_objects, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(278, 246);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(371, 304);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Location = new System.Drawing.Point(4, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 13);
+            this.label3.Size = new System.Drawing.Size(215, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Device Profile Specific Parameters";
             // 
@@ -323,9 +340,10 @@ namespace ODEditor
             this.listView_deviceProfile_objects.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView_deviceProfile_objects.FullRowSelect = true;
             this.listView_deviceProfile_objects.HideSelection = false;
-            this.listView_deviceProfile_objects.Location = new System.Drawing.Point(3, 23);
+            this.listView_deviceProfile_objects.Location = new System.Drawing.Point(4, 29);
+            this.listView_deviceProfile_objects.Margin = new System.Windows.Forms.Padding(4);
             this.listView_deviceProfile_objects.Name = "listView_deviceProfile_objects";
-            this.listView_deviceProfile_objects.Size = new System.Drawing.Size(272, 220);
+            this.listView_deviceProfile_objects.Size = new System.Drawing.Size(363, 271);
             this.listView_deviceProfile_objects.TabIndex = 0;
             this.listView_deviceProfile_objects.UseCompatibleStateImageBehavior = false;
             this.listView_deviceProfile_objects.View = System.Windows.Forms.View.Details;
@@ -346,6 +364,7 @@ namespace ODEditor
             // 
             this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer4.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer4.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer4.Name = "splitContainer4";
             this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -366,8 +385,9 @@ namespace ODEditor
             this.splitContainer4.Panel2.Controls.Add(this.label6);
             this.splitContainer4.Panel2.Controls.Add(this.textBox_name);
             this.splitContainer4.Panel2.Controls.Add(this.textBox_description);
-            this.splitContainer4.Size = new System.Drawing.Size(854, 745);
-            this.splitContainer4.SplitterDistance = 224;
+            this.splitContainer4.Size = new System.Drawing.Size(1139, 917);
+            this.splitContainer4.SplitterDistance = 275;
+            this.splitContainer4.SplitterWidth = 5;
             this.splitContainer4.TabIndex = 28;
             this.splitContainer4.TabStop = false;
             // 
@@ -384,12 +404,14 @@ namespace ODEditor
             this.columnHeader11,
             this.columnHeader12,
             this.columnHeader13,
-            this.columnHeader14});
+            this.columnHeader14,
+            this.columnHeader15});
             this.listView_subObjects.FullRowSelect = true;
             this.listView_subObjects.HideSelection = false;
             this.listView_subObjects.Location = new System.Drawing.Point(0, 0);
+            this.listView_subObjects.Margin = new System.Windows.Forms.Padding(4);
             this.listView_subObjects.Name = "listView_subObjects";
-            this.listView_subObjects.Size = new System.Drawing.Size(851, 223);
+            this.listView_subObjects.Size = new System.Drawing.Size(1133, 273);
             this.listView_subObjects.TabIndex = 0;
             this.listView_subObjects.UseCompatibleStateImageBehavior = false;
             this.listView_subObjects.View = System.Windows.Forms.View.Details;
@@ -438,33 +460,38 @@ namespace ODEditor
             // 
             // textBox_subIndex
             // 
-            this.textBox_subIndex.Location = new System.Drawing.Point(260, 8);
+            this.textBox_subIndex.Location = new System.Drawing.Point(347, 10);
+            this.textBox_subIndex.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_subIndex.Name = "textBox_subIndex";
             this.textBox_subIndex.ReadOnly = true;
-            this.textBox_subIndex.Size = new System.Drawing.Size(100, 20);
+            this.textBox_subIndex.Size = new System.Drawing.Size(132, 22);
             this.textBox_subIndex.TabIndex = 0;
             this.textBox_subIndex.TabStop = false;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(199, 11);
+            this.label23.Location = new System.Drawing.Point(265, 14);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(55, 13);
+            this.label23.Size = new System.Drawing.Size(66, 16);
             this.label23.TabIndex = 34;
             this.label23.Text = "Sub Index";
             // 
             // textBox_index
             // 
-            this.textBox_index.Location = new System.Drawing.Point(90, 8);
+            this.textBox_index.Location = new System.Drawing.Point(120, 10);
+            this.textBox_index.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_index.Name = "textBox_index";
             this.textBox_index.ReadOnly = true;
-            this.textBox_index.Size = new System.Drawing.Size(100, 20);
+            this.textBox_index.Size = new System.Drawing.Size(132, 22);
             this.textBox_index.TabIndex = 0;
             this.textBox_index.TabStop = false;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.textBox_InvertedSRAD);
             this.groupBox1.Controls.Add(this.checkBox_autosave);
             this.groupBox1.Controls.Add(this.textBox_stringLengthMin);
             this.groupBox1.Controls.Add(this.label22);
@@ -496,47 +523,70 @@ namespace ODEditor
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.comboBox_accessPDO);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 329);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(0, 406);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(854, 188);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1139, 231);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Object settings";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(331, 159);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(93, 16);
+            this.label12.TabIndex = 52;
+            this.label12.Text = "InvertedSRAD";
+            // 
+            // textBox_InvertedSRAD
+            // 
+            this.textBox_InvertedSRAD.Location = new System.Drawing.Point(453, 157);
+            this.textBox_InvertedSRAD.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_InvertedSRAD.Name = "textBox_InvertedSRAD";
+            this.textBox_InvertedSRAD.Size = new System.Drawing.Size(161, 22);
+            this.textBox_InvertedSRAD.TabIndex = 51;
+            this.textBox_InvertedSRAD.TextChanged += new System.EventHandler(this.DataDirty);
+            // 
             // checkBox_autosave
             // 
-            this.checkBox_autosave.Location = new System.Drawing.Point(634, 146);
+            this.checkBox_autosave.Location = new System.Drawing.Point(845, 180);
+            this.checkBox_autosave.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_autosave.Name = "checkBox_autosave";
-            this.checkBox_autosave.Size = new System.Drawing.Size(116, 21);
+            this.checkBox_autosave.Size = new System.Drawing.Size(155, 26);
             this.checkBox_autosave.TabIndex = 35;
             this.checkBox_autosave.Text = "Autosave changes";
             this.checkBox_autosave.UseVisualStyleBackColor = true;
             // 
             // textBox_stringLengthMin
             // 
-            this.textBox_stringLengthMin.Location = new System.Drawing.Point(340, 99);
+            this.textBox_stringLengthMin.Location = new System.Drawing.Point(453, 122);
+            this.textBox_stringLengthMin.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_stringLengthMin.Name = "textBox_stringLengthMin";
-            this.textBox_stringLengthMin.Size = new System.Drawing.Size(122, 20);
+            this.textBox_stringLengthMin.Size = new System.Drawing.Size(161, 22);
             this.textBox_stringLengthMin.TabIndex = 24;
             this.textBox_stringLengthMin.TextChanged += new System.EventHandler(this.DataDirty);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(248, 102);
+            this.label22.Location = new System.Drawing.Point(331, 126);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(75, 13);
+            this.label22.Size = new System.Drawing.Size(90, 16);
             this.label22.TabIndex = 39;
             this.label22.Text = "String Len Min";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(482, 21);
+            this.label20.Location = new System.Drawing.Point(643, 26);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(64, 13);
+            this.label20.Size = new System.Drawing.Size(78, 16);
             this.label20.TabIndex = 36;
             this.label20.Text = "Count Label";
             // 
@@ -544,18 +594,20 @@ namespace ODEditor
             // 
             this.comboBox_countLabel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_countLabel.FormattingEnabled = true;
-            this.comboBox_countLabel.Location = new System.Drawing.Point(574, 18);
+            this.comboBox_countLabel.Location = new System.Drawing.Point(765, 22);
+            this.comboBox_countLabel.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_countLabel.Name = "comboBox_countLabel";
-            this.comboBox_countLabel.Size = new System.Drawing.Size(122, 21);
+            this.comboBox_countLabel.Size = new System.Drawing.Size(161, 24);
             this.comboBox_countLabel.TabIndex = 30;
             this.comboBox_countLabel.SelectedIndexChanged += new System.EventHandler(this.DataDirty);
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(13, 129);
+            this.label19.Location = new System.Drawing.Point(17, 159);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(76, 13);
+            this.label19.Size = new System.Drawing.Size(94, 16);
             this.label19.TabIndex = 34;
             this.label19.Text = "Access SRDO";
             // 
@@ -563,61 +615,68 @@ namespace ODEditor
             // 
             this.comboBox_accessSRDO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_accessSRDO.FormattingEnabled = true;
-            this.comboBox_accessSRDO.Location = new System.Drawing.Point(108, 126);
+            this.comboBox_accessSRDO.Location = new System.Drawing.Point(144, 155);
+            this.comboBox_accessSRDO.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_accessSRDO.Name = "comboBox_accessSRDO";
-            this.comboBox_accessSRDO.Size = new System.Drawing.Size(122, 21);
+            this.comboBox_accessSRDO.Size = new System.Drawing.Size(161, 24);
             this.comboBox_accessSRDO.TabIndex = 14;
             this.comboBox_accessSRDO.SelectedIndexChanged += new System.EventHandler(this.DataDirty);
             // 
             // textBox_actualValue
             // 
             this.textBox_actualValue.BackColor = System.Drawing.Color.PeachPuff;
-            this.textBox_actualValue.Location = new System.Drawing.Point(340, 72);
+            this.textBox_actualValue.Location = new System.Drawing.Point(453, 89);
+            this.textBox_actualValue.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_actualValue.Name = "textBox_actualValue";
-            this.textBox_actualValue.Size = new System.Drawing.Size(122, 20);
+            this.textBox_actualValue.Size = new System.Drawing.Size(161, 22);
             this.textBox_actualValue.TabIndex = 23;
             this.textBox_actualValue.TextChanged += new System.EventHandler(this.DataDirty);
             // 
             // textBox_lowLimit
             // 
-            this.textBox_lowLimit.Location = new System.Drawing.Point(340, 45);
+            this.textBox_lowLimit.Location = new System.Drawing.Point(453, 55);
+            this.textBox_lowLimit.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_lowLimit.Name = "textBox_lowLimit";
-            this.textBox_lowLimit.Size = new System.Drawing.Size(122, 20);
+            this.textBox_lowLimit.Size = new System.Drawing.Size(161, 22);
             this.textBox_lowLimit.TabIndex = 22;
             this.textBox_lowLimit.TextChanged += new System.EventHandler(this.DataDirty);
             // 
             // textBox_highLimit
             // 
-            this.textBox_highLimit.Location = new System.Drawing.Point(340, 18);
+            this.textBox_highLimit.Location = new System.Drawing.Point(453, 22);
+            this.textBox_highLimit.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_highLimit.Name = "textBox_highLimit";
-            this.textBox_highLimit.Size = new System.Drawing.Size(122, 20);
+            this.textBox_highLimit.Size = new System.Drawing.Size(161, 22);
             this.textBox_highLimit.TabIndex = 21;
             this.textBox_highLimit.TextChanged += new System.EventHandler(this.DataDirty);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(248, 75);
+            this.label18.Location = new System.Drawing.Point(331, 92);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(67, 13);
+            this.label18.Size = new System.Drawing.Size(82, 16);
             this.label18.TabIndex = 32;
             this.label18.Text = "Actual Value";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(248, 48);
+            this.label17.Location = new System.Drawing.Point(331, 59);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(48, 13);
+            this.label17.Size = new System.Drawing.Size(58, 16);
             this.label17.TabIndex = 31;
             this.label17.Text = "LowLimit";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(248, 21);
+            this.label14.Location = new System.Drawing.Point(331, 26);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 13);
+            this.label14.Size = new System.Drawing.Size(62, 16);
             this.label14.TabIndex = 30;
             this.label14.Text = "HighLimit";
             // 
@@ -625,9 +684,10 @@ namespace ODEditor
             // 
             this.button_saveChanges.Image = global::ODEditor.Properties.Resources.Save_6530;
             this.button_saveChanges.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_saveChanges.Location = new System.Drawing.Point(485, 138);
+            this.button_saveChanges.Location = new System.Drawing.Point(647, 170);
+            this.button_saveChanges.Margin = new System.Windows.Forms.Padding(4);
             this.button_saveChanges.Name = "button_saveChanges";
-            this.button_saveChanges.Size = new System.Drawing.Size(143, 35);
+            this.button_saveChanges.Size = new System.Drawing.Size(191, 43);
             this.button_saveChanges.TabIndex = 50;
             this.button_saveChanges.Text = "Save Changes";
             this.button_saveChanges.UseVisualStyleBackColor = true;
@@ -636,9 +696,10 @@ namespace ODEditor
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(482, 48);
+            this.label16.Location = new System.Drawing.Point(643, 59);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(76, 13);
+            this.label16.Size = new System.Drawing.Size(95, 16);
             this.label16.TabIndex = 26;
             this.label16.Text = "Storage Group";
             // 
@@ -646,27 +707,30 @@ namespace ODEditor
             // 
             this.comboBox_storageGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_storageGroup.FormattingEnabled = true;
-            this.comboBox_storageGroup.Location = new System.Drawing.Point(574, 45);
+            this.comboBox_storageGroup.Location = new System.Drawing.Point(765, 55);
+            this.comboBox_storageGroup.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_storageGroup.Name = "comboBox_storageGroup";
-            this.comboBox_storageGroup.Size = new System.Drawing.Size(122, 21);
+            this.comboBox_storageGroup.Size = new System.Drawing.Size(161, 24);
             this.comboBox_storageGroup.TabIndex = 31;
             this.comboBox_storageGroup.SelectedIndexChanged += new System.EventHandler(this.DataDirty);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(482, 72);
+            this.label15.Location = new System.Drawing.Point(643, 89);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 13);
+            this.label15.Size = new System.Drawing.Size(58, 16);
             this.label15.TabIndex = 24;
             this.label15.Text = "Enabled";
             // 
             // checkBox_enabled
             // 
             this.checkBox_enabled.AutoSize = true;
-            this.checkBox_enabled.Location = new System.Drawing.Point(574, 72);
+            this.checkBox_enabled.Location = new System.Drawing.Point(765, 89);
+            this.checkBox_enabled.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_enabled.Name = "checkBox_enabled";
-            this.checkBox_enabled.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_enabled.Size = new System.Drawing.Size(18, 17);
             this.checkBox_enabled.TabIndex = 32;
             this.checkBox_enabled.UseVisualStyleBackColor = true;
             this.checkBox_enabled.CheckedChanged += new System.EventHandler(this.DataDirty);
@@ -674,9 +738,10 @@ namespace ODEditor
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 21);
+            this.label7.Location = new System.Drawing.Point(17, 26);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 13);
+            this.label7.Size = new System.Drawing.Size(81, 16);
             this.label7.TabIndex = 7;
             this.label7.Text = "Object Type";
             // 
@@ -685,18 +750,20 @@ namespace ODEditor
             this.comboBox_objectType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_objectType.Enabled = false;
             this.comboBox_objectType.FormattingEnabled = true;
-            this.comboBox_objectType.Location = new System.Drawing.Point(108, 18);
+            this.comboBox_objectType.Location = new System.Drawing.Point(144, 22);
+            this.comboBox_objectType.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_objectType.Name = "comboBox_objectType";
-            this.comboBox_objectType.Size = new System.Drawing.Size(122, 21);
+            this.comboBox_objectType.Size = new System.Drawing.Size(161, 24);
             this.comboBox_objectType.TabIndex = 10;
             this.comboBox_objectType.SelectedIndexChanged += new System.EventHandler(this.DataDirty);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 48);
+            this.label8.Location = new System.Drawing.Point(17, 59);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.Size = new System.Drawing.Size(71, 16);
             this.label8.TabIndex = 9;
             this.label8.Text = "Data Type";
             // 
@@ -704,36 +771,40 @@ namespace ODEditor
             // 
             this.comboBox_dataType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_dataType.FormattingEnabled = true;
-            this.comboBox_dataType.Location = new System.Drawing.Point(108, 45);
+            this.comboBox_dataType.Location = new System.Drawing.Point(144, 55);
+            this.comboBox_dataType.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_dataType.Name = "comboBox_dataType";
-            this.comboBox_dataType.Size = new System.Drawing.Size(122, 21);
+            this.comboBox_dataType.Size = new System.Drawing.Size(161, 24);
             this.comboBox_dataType.TabIndex = 11;
             this.comboBox_dataType.SelectedIndexChanged += new System.EventHandler(this.DataDirty);
             // 
             // label_pdoFlags
             // 
             this.label_pdoFlags.AutoSize = true;
-            this.label_pdoFlags.Location = new System.Drawing.Point(482, 92);
+            this.label_pdoFlags.Location = new System.Drawing.Point(643, 113);
+            this.label_pdoFlags.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_pdoFlags.Name = "label_pdoFlags";
-            this.label_pdoFlags.Size = new System.Drawing.Size(62, 13);
+            this.label_pdoFlags.Size = new System.Drawing.Size(76, 16);
             this.label_pdoFlags.TabIndex = 18;
             this.label_pdoFlags.Text = "TPDO COS";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 75);
+            this.label9.Location = new System.Drawing.Point(17, 92);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 13);
+            this.label9.Size = new System.Drawing.Size(84, 16);
             this.label9.TabIndex = 11;
             this.label9.Text = "Access SDO";
             // 
             // checkBox_pdoFlags
             // 
             this.checkBox_pdoFlags.AutoSize = true;
-            this.checkBox_pdoFlags.Location = new System.Drawing.Point(574, 92);
+            this.checkBox_pdoFlags.Location = new System.Drawing.Point(765, 113);
+            this.checkBox_pdoFlags.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_pdoFlags.Name = "checkBox_pdoFlags";
-            this.checkBox_pdoFlags.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_pdoFlags.Size = new System.Drawing.Size(18, 17);
             this.checkBox_pdoFlags.TabIndex = 34;
             this.checkBox_pdoFlags.UseVisualStyleBackColor = true;
             this.checkBox_pdoFlags.CheckedChanged += new System.EventHandler(this.DataDirty);
@@ -742,35 +813,39 @@ namespace ODEditor
             // 
             this.comboBox_accessSDO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_accessSDO.FormattingEnabled = true;
-            this.comboBox_accessSDO.Location = new System.Drawing.Point(108, 72);
+            this.comboBox_accessSDO.Location = new System.Drawing.Point(144, 89);
+            this.comboBox_accessSDO.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_accessSDO.Name = "comboBox_accessSDO";
-            this.comboBox_accessSDO.Size = new System.Drawing.Size(122, 21);
+            this.comboBox_accessSDO.Size = new System.Drawing.Size(161, 24);
             this.comboBox_accessSDO.TabIndex = 12;
             this.comboBox_accessSDO.SelectedIndexChanged += new System.EventHandler(this.DataDirty);
             // 
             // textBox_defaultValue
             // 
-            this.textBox_defaultValue.Location = new System.Drawing.Point(108, 153);
+            this.textBox_defaultValue.Location = new System.Drawing.Point(144, 188);
+            this.textBox_defaultValue.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_defaultValue.Name = "textBox_defaultValue";
-            this.textBox_defaultValue.Size = new System.Drawing.Size(354, 20);
+            this.textBox_defaultValue.Size = new System.Drawing.Size(471, 22);
             this.textBox_defaultValue.TabIndex = 20;
             this.textBox_defaultValue.TextChanged += new System.EventHandler(this.DataDirty);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 102);
+            this.label10.Location = new System.Drawing.Point(17, 126);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 13);
+            this.label10.Size = new System.Drawing.Size(84, 16);
             this.label10.TabIndex = 13;
             this.label10.Text = "Access PDO";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 156);
+            this.label11.Location = new System.Drawing.Point(17, 192);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 13);
+            this.label11.Size = new System.Drawing.Size(85, 16);
             this.label11.TabIndex = 15;
             this.label11.Text = "Default value";
             // 
@@ -778,9 +853,10 @@ namespace ODEditor
             // 
             this.comboBox_accessPDO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_accessPDO.FormattingEnabled = true;
-            this.comboBox_accessPDO.Location = new System.Drawing.Point(108, 99);
+            this.comboBox_accessPDO.Location = new System.Drawing.Point(144, 122);
+            this.comboBox_accessPDO.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_accessPDO.Name = "comboBox_accessPDO";
-            this.comboBox_accessPDO.Size = new System.Drawing.Size(122, 21);
+            this.comboBox_accessPDO.Size = new System.Drawing.Size(161, 24);
             this.comboBox_accessPDO.TabIndex = 13;
             this.comboBox_accessPDO.SelectedIndexChanged += new System.EventHandler(this.DataDirty);
             // 
@@ -789,45 +865,50 @@ namespace ODEditor
             this.textBox_denotation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_denotation.BackColor = System.Drawing.Color.PeachPuff;
-            this.textBox_denotation.Location = new System.Drawing.Point(90, 60);
+            this.textBox_denotation.Location = new System.Drawing.Point(120, 74);
+            this.textBox_denotation.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_denotation.Name = "textBox_denotation";
-            this.textBox_denotation.Size = new System.Drawing.Size(761, 20);
+            this.textBox_denotation.Size = new System.Drawing.Size(1013, 22);
             this.textBox_denotation.TabIndex = 3;
             this.textBox_denotation.TextChanged += new System.EventHandler(this.DataDirty);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(13, 63);
+            this.label13.Location = new System.Drawing.Point(17, 78);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(59, 13);
+            this.label13.Size = new System.Drawing.Size(72, 16);
             this.label13.TabIndex = 28;
             this.label13.Text = "Denotation";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 11);
+            this.label4.Location = new System.Drawing.Point(17, 14);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.Size = new System.Drawing.Size(39, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "Index";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 37);
+            this.label5.Location = new System.Drawing.Point(17, 46);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(44, 16);
             this.label5.TabIndex = 2;
             this.label5.Text = "Name";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 89);
+            this.label6.Location = new System.Drawing.Point(17, 110);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 13);
+            this.label6.Size = new System.Drawing.Size(75, 16);
             this.label6.TabIndex = 3;
             this.label6.Text = "Description";
             // 
@@ -835,9 +916,10 @@ namespace ODEditor
             // 
             this.textBox_name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_name.Location = new System.Drawing.Point(90, 34);
+            this.textBox_name.Location = new System.Drawing.Point(120, 42);
+            this.textBox_name.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_name.Name = "textBox_name";
-            this.textBox_name.Size = new System.Drawing.Size(761, 20);
+            this.textBox_name.Size = new System.Drawing.Size(1013, 22);
             this.textBox_name.TabIndex = 2;
             this.textBox_name.TextChanged += new System.EventHandler(this.DataDirty);
             // 
@@ -849,11 +931,12 @@ namespace ODEditor
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_description.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_description.Location = new System.Drawing.Point(90, 86);
+            this.textBox_description.Location = new System.Drawing.Point(120, 106);
+            this.textBox_description.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_description.Multiline = true;
             this.textBox_description.Name = "textBox_description";
             this.textBox_description.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_description.Size = new System.Drawing.Size(761, 227);
+            this.textBox_description.Size = new System.Drawing.Size(1013, 276);
             this.textBox_description.TabIndex = 4;
             this.textBox_description.TextChanged += new System.EventHandler(this.DataDirty);
             // 
@@ -866,12 +949,12 @@ namespace ODEditor
             this.contextMenu_object_deleteObjectToolStripMenuItem,
             this.contextMenu_object_toggleObjectToolStripMenuItem});
             this.contextMenu_object.Name = "contextMenuStrip1";
-            this.contextMenu_object.Size = new System.Drawing.Size(121, 108);
+            this.contextMenu_object.Size = new System.Drawing.Size(136, 108);
             // 
             // contextMenu_object_addNewObjectToolStripMenuItem
             // 
             this.contextMenu_object_addNewObjectToolStripMenuItem.Name = "contextMenu_object_addNewObjectToolStripMenuItem";
-            this.contextMenu_object_addNewObjectToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
+            this.contextMenu_object_addNewObjectToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.contextMenu_object_addNewObjectToolStripMenuItem.Text = "&Clone...";
             this.contextMenu_object_addNewObjectToolStripMenuItem.Click += new System.EventHandler(this.ContextMenu_object_clone_ToolStripMenuItem_Click);
             // 
@@ -879,7 +962,7 @@ namespace ODEditor
             // 
             this.addToolStripMenuItem.Image = global::ODEditor.Properties.Resources.action_add_16xLG;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.addToolStripMenuItem.Text = "Add...";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.ContextMenu_object_add_ToolStripMenuItem_Click);
             // 
@@ -887,14 +970,14 @@ namespace ODEditor
             // 
             this.contextMenu_object_deleteObjectToolStripMenuItem.Image = global::ODEditor.Properties.Resources.Remove_16xLG;
             this.contextMenu_object_deleteObjectToolStripMenuItem.Name = "contextMenu_object_deleteObjectToolStripMenuItem";
-            this.contextMenu_object_deleteObjectToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
+            this.contextMenu_object_deleteObjectToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.contextMenu_object_deleteObjectToolStripMenuItem.Text = "&Delete...";
             this.contextMenu_object_deleteObjectToolStripMenuItem.Click += new System.EventHandler(this.ContextMenu_object_delete_ToolStripMenuItem_Click);
             // 
             // contextMenu_object_toggleObjectToolStripMenuItem
             // 
             this.contextMenu_object_toggleObjectToolStripMenuItem.Name = "contextMenu_object_toggleObjectToolStripMenuItem";
-            this.contextMenu_object_toggleObjectToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
+            this.contextMenu_object_toggleObjectToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.contextMenu_object_toggleObjectToolStripMenuItem.Text = "&Toggle";
             this.contextMenu_object_toggleObjectToolStripMenuItem.Click += new System.EventHandler(this.ContextMenu_object_toggle_ToolStripMenuItem_Click);
             // 
@@ -906,13 +989,13 @@ namespace ODEditor
             this.contextMenu_subObject_removeSubItemToolStripMenuItem,
             this.contextMenu_subObject_removeSubItemLeaveGapToolStripMenuItem});
             this.contextMenu_subObject.Name = "contextMenu_array";
-            this.contextMenu_subObject.Size = new System.Drawing.Size(183, 82);
+            this.contextMenu_subObject.Size = new System.Drawing.Size(216, 82);
             // 
             // contextMenu_subObject_addSubItemToolStripMenuItem
             // 
             this.contextMenu_subObject_addSubItemToolStripMenuItem.Image = global::ODEditor.Properties.Resources.action_add_16xLG;
             this.contextMenu_subObject_addSubItemToolStripMenuItem.Name = "contextMenu_subObject_addSubItemToolStripMenuItem";
-            this.contextMenu_subObject_addSubItemToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.contextMenu_subObject_addSubItemToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
             this.contextMenu_subObject_addSubItemToolStripMenuItem.Text = "Add";
             this.contextMenu_subObject_addSubItemToolStripMenuItem.Click += new System.EventHandler(this.ContextMenu_subObject_add_ToolStripMenuItem_Click);
             // 
@@ -920,7 +1003,7 @@ namespace ODEditor
             // 
             this.contextMenu_subObject_removeSubItemToolStripMenuItem.Image = global::ODEditor.Properties.Resources.Remove_16xLG;
             this.contextMenu_subObject_removeSubItemToolStripMenuItem.Name = "contextMenu_subObject_removeSubItemToolStripMenuItem";
-            this.contextMenu_subObject_removeSubItemToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.contextMenu_subObject_removeSubItemToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
             this.contextMenu_subObject_removeSubItemToolStripMenuItem.Text = "Remove (shift up)";
             this.contextMenu_subObject_removeSubItemToolStripMenuItem.Click += new System.EventHandler(this.ContextMenu_subObject_remove_ToolStripMenuItem_Click);
             // 
@@ -928,17 +1011,23 @@ namespace ODEditor
             // 
             this.contextMenu_subObject_removeSubItemLeaveGapToolStripMenuItem.Image = global::ODEditor.Properties.Resources.Remove_16xLG;
             this.contextMenu_subObject_removeSubItemLeaveGapToolStripMenuItem.Name = "contextMenu_subObject_removeSubItemLeaveGapToolStripMenuItem";
-            this.contextMenu_subObject_removeSubItemLeaveGapToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.contextMenu_subObject_removeSubItemLeaveGapToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
             this.contextMenu_subObject_removeSubItemLeaveGapToolStripMenuItem.Text = "Remove (leave gap)";
             this.contextMenu_subObject_removeSubItemLeaveGapToolStripMenuItem.Click += new System.EventHandler(this.ContextMenu_subObject_remove_ToolStripMenuItem_Click);
             // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "InvertedSRAD";
+            this.columnHeader15.Width = 190;
+            // 
             // DeviceODView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeviceODView";
-            this.Size = new System.Drawing.Size(1138, 745);
+            this.Size = new System.Drawing.Size(1517, 917);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -1050,5 +1139,8 @@ namespace ODEditor
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.CheckBox checkBox_autosave;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox_InvertedSRAD;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
     }
 }

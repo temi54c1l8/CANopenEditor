@@ -1516,6 +1516,8 @@ namespace CanOpenXSD_1_1 {
 
         private string actualValueField;
 
+        private string invertedSRADField;
+
         private string denotationField;
 
         private CANopenObjectListCANopenObjectPDOmapping pDOmappingField;
@@ -1655,6 +1657,20 @@ namespace CanOpenXSD_1_1 {
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string invertedSRAD
+        {
+            get
+            {
+                return this.invertedSRADField;
+            }
+            set
+            {
+                this.invertedSRADField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
         public string denotation {
             get {
                 return this.denotationField;
@@ -1769,6 +1785,8 @@ namespace CanOpenXSD_1_1 {
         private string defaultValueField;
 
         private string actualValueField;
+
+        private string invertedSRADField;
 
         private string denotationField;
 
@@ -1889,6 +1907,20 @@ namespace CanOpenXSD_1_1 {
             }
             set {
                 this.actualValueField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string invertedSRAD
+        {
+            get
+            {
+                return this.invertedSRADField;
+            }
+            set
+            {
+                this.invertedSRADField = value;
             }
         }
 
@@ -6032,6 +6064,84 @@ namespace CanOpenXSD_1_1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.canopen.org/xml/1.1")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.canopen.org/xml/1.1", IsNullable = false)]
+    public partial class invertedSRAD
+    {
+
+        private object[] itemsField;
+
+        private string valueField;
+
+        private string offsetField;
+
+        private string multiplierField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("description", typeof(vendorTextDescription), Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [System.Xml.Serialization.XmlElementAttribute("descriptionRef", typeof(vendorTextDescriptionRef), Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [System.Xml.Serialization.XmlElementAttribute("label", typeof(vendorTextLabel), Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [System.Xml.Serialization.XmlElementAttribute("labelRef", typeof(vendorTextLabelRef), Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public object[] Items
+        {
+            get
+            {
+                return this.itemsField;
+            }
+            set
+            {
+                this.itemsField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string value
+        {
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string offset
+        {
+            get
+            {
+                return this.offsetField;
+            }
+            set
+            {
+                this.offsetField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string multiplier
+        {
+            get
+            {
+                return this.multiplierField;
+            }
+            set
+            {
+                this.multiplierField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.canopen.org/xml/1.1")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.canopen.org/xml/1.1", IsNullable=false)]
     public partial class allowedValues {
@@ -8150,6 +8260,8 @@ namespace CanOpenXSD_1_1 {
 
         private defaultValue defaultValueField;
 
+        private invertedSRAD invertedSRADField;
+
         private substituteValue substituteValueField;
 
         private allowedValues allowedValuesField;
@@ -8273,14 +8385,32 @@ namespace CanOpenXSD_1_1 {
         }
 
         /// <remarks/>
-        public defaultValue defaultValue {
-            get {
+        public defaultValue defaultValue
+        {
+            get
+            {
                 return this.defaultValueField;
             }
-            set {
+            set
+            {
                 this.defaultValueField = value;
             }
         }
+
+        /// <remarks/>
+        public invertedSRAD invertedSRAD
+        {
+            get
+            {
+                return this.invertedSRADField;
+            }
+            set
+            {
+                this.invertedSRADField = value;
+            }
+        }
+
+        
 
         /// <remarks/>
         public substituteValue substituteValue {

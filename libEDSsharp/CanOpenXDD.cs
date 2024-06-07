@@ -468,6 +468,7 @@ namespace libEDSsharp
                 AppLayer.CANopenObjectList.CANopenObject[count].highLimit = od.HighLimit;
                 AppLayer.CANopenObjectList.CANopenObject[count].lowLimit = od.LowLimit;
                 AppLayer.CANopenObjectList.CANopenObject[count].actualValue = od.actualvalue;
+                AppLayer.CANopenObjectList.CANopenObject[count].invertedSRAD = od.InvertedSRAD;
 
                 if (od.subobjects != null && od.subobjects.Count > 0)
                 {
@@ -532,6 +533,7 @@ namespace libEDSsharp
                         AppLayer.CANopenObjectList.CANopenObject[count].CANopenSubObject[subcount].highLimit = subod.HighLimit;
                         AppLayer.CANopenObjectList.CANopenObject[count].CANopenSubObject[subcount].lowLimit = subod.LowLimit;
                         AppLayer.CANopenObjectList.CANopenObject[count].CANopenSubObject[subcount].actualValue = subod.actualvalue;
+                        AppLayer.CANopenObjectList.CANopenObject[count].CANopenSubObject[subcount].invertedSRAD = subod.InvertedSRAD;
 
 
                         subcount++;
@@ -977,6 +979,9 @@ namespace libEDSsharp
                         if (obj3.actualValue != null)
                             entry.actualvalue = obj3.actualValue;
 
+                        if (obj3.invertedSRAD != null)
+                            entry.InvertedSRAD = obj3.invertedSRAD;
+
                         if (obj3.denotation != null)
                             entry.denotation = obj3.denotation;
 
@@ -1109,7 +1114,10 @@ namespace libEDSsharp
                                 if(subobj.actualValue!=null)
                                     subentry.actualvalue = subobj.actualValue;
 
-                                if(subobj.denotation!=null)
+                                if (subobj.invertedSRAD != null)
+                                    subentry.InvertedSRAD = subobj.invertedSRAD;
+
+                                if (subobj.denotation!=null)
                                     subentry.denotation = subobj.denotation;
 
                                 if(subobj.objFlags!=null)

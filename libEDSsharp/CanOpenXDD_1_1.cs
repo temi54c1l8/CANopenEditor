@@ -291,7 +291,10 @@ namespace libEDSsharp
             devPar.Items1ElementName = new Items1ChoiceType[] { ConvertDataType(od) };
 
             if (od.defaultvalue != null && od.defaultvalue != "")
-                    devPar.defaultValue = new defaultValue { value = od.defaultvalue };
+                devPar.defaultValue = new defaultValue { value = od.defaultvalue };
+
+            if (od.InvertedSRAD != null && od.InvertedSRAD != "")
+                devPar.invertedSRAD = new invertedSRAD { value = od.InvertedSRAD };
 
             if (od.LowLimit != null && od.LowLimit != "" && od.HighLimit != null && od.HighLimit != "")
             {
@@ -1056,6 +1059,7 @@ namespace libEDSsharp
                                 denotation = netObj.denotation ?? "",
                                 LowLimit = netObj.lowLimit ?? "",
                                 HighLimit = netObj.highLimit ?? "",
+                                InvertedSRAD = netObj.invertedSRAD ?? "",
                                 ObjFlags = netObj.objFlags != null && netObj.objFlags.Length == 2 ? netObj.objFlags[1] : (byte)0,
                                 uniqueID = netObj.uniqueIDRef ?? ""
                             };
@@ -1076,6 +1080,9 @@ namespace libEDSsharp
 
                                 if (devPar.actualValue != null && devPar.actualValue.value != null)
                                     od.actualvalue = devPar.actualValue.value;
+
+                                if (devPar.invertedSRAD != null && devPar.invertedSRAD.value != null)
+                                    od.InvertedSRAD = devPar.invertedSRAD.value;
 
                                 if (devPar.denotation != null)
                                     od.denotation = G_label_getDescription(devPar.denotation.Items);
@@ -1143,6 +1150,7 @@ namespace libEDSsharp
                                         denotation = netSubObj.denotation ?? "",
                                         LowLimit = netSubObj.lowLimit ?? "",
                                         HighLimit = netSubObj.highLimit ?? "",
+                                        InvertedSRAD = netSubObj.invertedSRAD ?? "",
                                         ObjFlags = netSubObj.objFlags != null && netSubObj.objFlags.Length == 2 ? netSubObj.objFlags[1] : (byte)0,
                                         uniqueID = netSubObj.uniqueIDRef ?? ""
                                     };
@@ -1163,6 +1171,9 @@ namespace libEDSsharp
 
                                         if (devSubPar.actualValue != null && devSubPar.actualValue.value != null)
                                             subod.actualvalue = devSubPar.actualValue.value;
+
+                                        if (devSubPar.invertedSRAD != null && devSubPar.invertedSRAD.value != null)
+                                            subod.InvertedSRAD = devSubPar.invertedSRAD.value;
 
                                         if (devSubPar.denotation != null)
                                             subod.denotation = G_label_getDescription(devSubPar.denotation.Items);

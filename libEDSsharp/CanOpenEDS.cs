@@ -448,9 +448,10 @@ namespace libEDSsharp
                 writer.WriteLine(string.Format("PDOMapping={0}", PDOMapping == true ? 1 : 0));
                 Int32 SRmap = prop.CO_accessSRDO == AccessSRDO.no ? 0 : 1;
                 writer.WriteLine(string.Format(";SRDOMapping={0}", SRmap));
-                if (SRmap != 0)
+
+                if (InvertedSRAD != null && InvertedSRAD != "")
                 {
-                    writer.WriteLine(string.Format(";InvertedSRAD=see documentation..."));
+                    writer.WriteLine(string.Format(";InvertedSRAD={0}", InvertedSRAD));
                 }
 
                 if (prop.CO_flagsPDO == true)
@@ -722,6 +723,12 @@ namespace libEDSsharp
                         catch (Exception) { Console.WriteLine("** ALL GONE WRONG ** LowLimit:" + kvp.Value["LowLimit"]); }
                     }
 
+                    if (kvp.Value.ContainsKey("InvertedSRAD"))
+                    {
+                        try { od.InvertedSRAD = kvp.Value["InvertedSRAD"]; }
+                        catch (Exception) { Console.WriteLine("** ALL GONE WRONG ** InvertedSRAD:" + kvp.Value["InvertedSRAD"]); }
+                    }
+
                     if (kvp.Value.ContainsKey("Denotation"))
                     {
                         try { od.denotation = kvp.Value["Denotation"]; }
@@ -806,6 +813,9 @@ namespace libEDSsharp
 
                             if (kvp.Value.ContainsKey("LowLimit"))
                                 sub.HighLimit = kvp.Value["LowLimit"];
+
+                            if (kvp.Value.ContainsKey("InvertedSRAD"))
+                                sub.InvertedSRAD = kvp.Value["InvertedSRAD"];
 
                             od.subobjects.Add((ushort)(x), sub);
                         }

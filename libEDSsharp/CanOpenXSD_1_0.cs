@@ -1545,6 +1545,10 @@ namespace CanOpenXSD_1_0 {
 
         private string actualValueField;
 
+        private string invertedSRADField;
+
+        private string highInvertedSRAD;
+
         private string denotationField;
 
         private string edseditor_extension_storagelocationField;
@@ -1658,6 +1662,21 @@ namespace CanOpenXSD_1_0 {
             set
             {
                 this.highLimitField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string invertedSRAD
+        {
+            get
+            {
+                return this.
+                    invertedSRADField;
+            }
+            set
+            {
+                this.invertedSRADField = value;
             }
         }
 
@@ -1875,6 +1894,8 @@ namespace CanOpenXSD_1_0 {
 
         private string actualValueField;
 
+        private string invertedSRADField;
+
         private string denotationField;
 
         private CANopenObjectListCANopenObjectCANopenSubObjectPDOmapping pDOmappingField;
@@ -1982,6 +2003,20 @@ namespace CanOpenXSD_1_0 {
             set
             {
                 this.highLimitField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string invertedSRAD
+        {
+            get
+            {
+                return this.invertedSRADField;
+            }
+            set
+            {
+                this.invertedSRADField = value;
             }
         }
 

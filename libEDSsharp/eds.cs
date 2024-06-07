@@ -1038,6 +1038,12 @@ namespace libEDSsharp
             }
         }
 
+        /// <summary>
+        /// InvertedSRAD
+        /// </summary>
+        [EdsExport]
+        public string InvertedSRAD = "";
+
         //FIXME Count "If several modules are gathered to form a new Sub-Index,
         //then the number is 0, followed by semicolon and the
         //number of bits that are created per module to build a new
@@ -1169,6 +1175,7 @@ namespace libEDSsharp
                 LowLimit = LowLimit,
                 HighLimit = HighLimit,
                 actualvalue = actualvalue,
+                InvertedSRAD = InvertedSRAD,
                 Label = Label,
                 Description = Description,
                 subobjects = new SortedDictionary<UInt16, ODentry>(),
