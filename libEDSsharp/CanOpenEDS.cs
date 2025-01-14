@@ -1123,6 +1123,8 @@ namespace libEDSsharp
             fi.EDSVersionMajor = 4;
             fi.EDSVersionMinor = 0;
 
+            di.SimpleBootUpSlave = true;
+
             StreamWriter writer = System.IO.File.CreateText(filename);
             writer.NewLine = "\n";
             fi.Write(writer, ft);
