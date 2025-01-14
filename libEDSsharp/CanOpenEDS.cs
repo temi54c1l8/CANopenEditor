@@ -77,10 +77,6 @@ namespace libEDSsharp
                 string CommentString = comment == true ? ";" : "";
 
                 string NameString = f.Name;
-                if (NameString == "CANopenSafetySupported")
-                {
-                    NameString = ";CANopenSafetySupported";
-                }
                 if (NameString == "NG_Slave")
                 {
                     NameString = ";NG_Slave";
@@ -447,11 +443,11 @@ namespace libEDSsharp
 
                 writer.WriteLine(string.Format("PDOMapping={0}", PDOMapping == true ? 1 : 0));
                 Int32 SRmap = prop.CO_accessSRDO == AccessSRDO.no ? 0 : 1;
-                writer.WriteLine(string.Format(";SRDOMapping={0}", SRmap));
+                writer.WriteLine(string.Format("SRDOMapping={0}", SRmap));
 
                 if (InvertedSRAD != null && InvertedSRAD != "")
                 {
-                    writer.WriteLine(string.Format(";InvertedSRAD={0}", InvertedSRAD));
+                    writer.WriteLine(string.Format("InvertedSRAD={0}", InvertedSRAD));
                 }
 
                 if (prop.CO_flagsPDO == true)
